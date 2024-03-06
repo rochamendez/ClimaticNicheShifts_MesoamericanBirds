@@ -1,7 +1,7 @@
 ##################################
 ####Script for layer cropping####
 #################################
-### In case some of the code doesn’t work, check the quotation marks, they may be off or not adequate
+### In case some of the code doesnâ€™t work, check the quotation marks, they may be off or not adequate
 
 ### Check working directory
 ### Install and activate packages
@@ -58,32 +58,33 @@ library(gridExtra)
 
 ###Extent for Aulacorhynchus lineages
 sms_aula <- extent(-101.74, -95.62, 15.77, 18.45) 
-emnca_aula <- extent (
-sca_aula <- extent (
+emnca_aula <- extent(-100.81, -85.15, 12.66, 23.01)
+sca_aula <- extent(-84.99, -80.14, 7.38, 10.55)
 
 ###Extent for Cardellina lineages
-tmvb <- extent (
-sms_carde <- extent (
-smocc <- extent (
+tmvb <- extent(-104.66, -96.70, 18.30, 20.83)
+sms_carde <- extent(-101.74, -95.08, 15.84, 19.13)
+smocc <- extent(-109.43, -104.31, 22.86, 30.88)
 
 ###Extent for Eupherusa lineages
-cyano <- extent (
-eximia <- extent (
-polio <- extent (
-rid <- extent (
-nigri <- extent (
+cyano <- extent(-97.55, -96.05, 15.84, 16.39)
+eximia <- extent(-97.19, -81.92, 8.51, 19.15)
+polio <- extent(-100.66, -96.76, 16.08, 18.12)
+rid <- extent(-105.59, -103.24, 19.0024, 21.53)
+nigri <- extent(-84.99, -80.41, 8.34, 10.57)
 
 ###Extent for Chlorospingus lineages
-sca_chloro <- extent (
-nca_chloro <- extent (
-nchi <- extent (
-tux <- extent (
-sms_chloro <- extent (
+sca_chloro <- extent(-85.67, -81.90, 8.44, 11.04)
+nca_chloro <- extent(-92.15, -84.69, 12.85, 16.07)
+nchi <- extent(-95.03, -91.25, 15.05, 17.45)
+tux <- extent(-95.75, -94.64, 17.97, 18.69)
+sms_chloro <- extent(-101.74, -95.62, 15.77, 18.45)
+smo_chloro <- extent(-102.38, -95.62, 16.69, 25.68)
 
 ### Here we only present the step-by-step for the SMS region for Aulacorhynchus. Steps should be repeated for each lineage extension and saved accordingly.  
 
 ### Create an object with a WGS84 projection
-### To check the list of coordinate system references visit: http://spatialreference.org/ref/   https://epsg.io/
+### To check the list of coordinate system references visit: http://spatialreference.org/ref/  or  https://epsg.io/
 ### WGS84 (code   EPSG:4326)
 crs.wg <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
 
@@ -135,7 +136,7 @@ plot(MHMIR.WG$bio1)
 LGMCC.WG <- resample(LGMCC.WG, bioclim.vars.WG, method="bilinear")
 LGMMIR.WG <-resample(LGMMIR.WG, bioclim.vars.WG, method="bilinear")
 
-### Plot shapefiles. In this first example, I’m going to model Aulacorhynchus SMS lineage 
+### Plot shapefiles. In this first example, Iâ€™m going to model Aulacorhynchus SMS lineage 
 AulaSMS <- readOGR(dsn="D:/ms/nichos_SMS", layer="Pol_AulaSMS")
 AulaSMS2 <- spTransform(AulaSMS, CRS=crs.wg) 
 bioclim.vars.AulaSMS <- mask(bioclim.vars.WG, AulaSMS2)
