@@ -1,7 +1,4 @@
-###########################################
-########     Script for ENM        ########
-###########################################
-### In case some of the code doesn’t work, check the quotation marks, they may be off or not adequate.
+### In case some of the code doesnâ€™t work, check the quotation marks, they may be off or not adequate.
 #####################################################
 ################## Niche Overlap#####################
 #####################################################
@@ -174,7 +171,7 @@ ecospat.plot.niche (z5_grid, title="SMS", name.axis1="PC1", name.axis2="PC2", co
 
 ### Individual niche plots. Modifications of plot.niche functions from Broenniman et al. 2012 and Silva et al. 2014.
 n.groups <- 5
-g.names <- c("E. cyanophrys", "E. eximia", "E. nigriventris", “E. poliocerca”, “E. ridgwayi”)
+g.names <- c("E. cyanophrys", "E. eximia", "E. nigriventris", â€œE. poliocercaâ€, â€œE. ridgwayiâ€)
 g.colors <- c("cyan", "darkblue", "red", "green", "orange")
 z <- c(list(z1_grid, z2_grid, z3_grid,z4_grid,z5_grid))
 
