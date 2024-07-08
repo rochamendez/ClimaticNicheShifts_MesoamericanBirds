@@ -18,3 +18,6 @@ Code for niche overlap and environmental PCA R code for analyzing Cardellina lin
 
 ### 05.eupherusa_script.R 
 Code for niche overlap and environmental PCA R code for analyzing Eupherusa lineages
+
+### TIFF files
+The uploaded figures depict CHELSA projected niche models, using present bioclimatic layers as described in Methods of the main manuscript. Each taxon includes the projected niches of each of the analyzed lineages. 
